@@ -74,3 +74,10 @@ document.querySelector(".searchBar").addEventListener("keydown", function (e) {
         weather.search()
     }
 })
+
+document.querySelector(".expand").addEventListener("click", function () {
+    document.querySelector(".expandedInfo").classList.toggle("display")
+    document.querySelector(".container").classList.toggle("radius")
+    document.querySelector(".expand i").classList.toggle("fa-caret-down")
+    document.querySelector(".expand i").classList.toggle("fa-caret-up")
+})
