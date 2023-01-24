@@ -1,5 +1,9 @@
 window.addEventListener("load", () => {
-    weather.fetchWeather(window.localStorage.getItem("name"))
+    if (window.localStorage.getItem("name") == undefined){
+        weather.fetchWeather("tokyo")
+    }else{
+        weather.fetchWeather(window.localStorage.getItem("name"))
+    }
 });
 
 let dayTime = document.querySelector(".day-time");
