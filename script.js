@@ -1,8 +1,8 @@
 window.addEventListener("load", () => {
-    if (window.localStorage.getItem("name") == undefined){
+    if (localStorage.getItem("name") == undefined){
         weather.fetchWeather("tokyo");
     }else{
-        weather.fetchWeather(window.localStorage.getItem("name"));
+        weather.fetchWeather(localStorage.getItem("name"));
     }
 });
 
@@ -65,7 +65,7 @@ let weather = {
     },
     search: function() {
         this.fetchWeather(document.querySelector(".searchBar").value)
-        window.localStorage.setItem("name", document.querySelector(".searchBar").value)
+        localStorage.setItem("name", document.querySelector(".searchBar").value)
     }    
 }
 
