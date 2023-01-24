@@ -1,8 +1,8 @@
 window.addEventListener("load", () => {
     if (window.localStorage.getItem("name") == undefined){
-        weather.fetchWeather("tokyo")
+        weather.fetchWeather("tokyo");
     }else{
-        weather.fetchWeather(window.localStorage.getItem("name"))
+        weather.fetchWeather(window.localStorage.getItem("name"));
     }
 });
 
